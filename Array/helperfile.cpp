@@ -1,14 +1,5 @@
 #include"myheader.h"
 
-int ArraySearch::increament(int iData)
-{
-	for(int i = 0; i< iData;i++)
-	{
-		cout<<i;
-	}
-
-	return iData;
-}
 int ArraySearch::SearchFirst(int data)
 {
 	int i = 0;	
@@ -67,7 +58,6 @@ int Array::GetData(int index)
 
 void Array::SetData(int iValue,int index)
 {
-
 	if((index>=length)&&(index<0))
 	{
 		return;
@@ -78,9 +68,50 @@ void Array::SetData(int iValue,int index)
 	}
 }
 
+int ArrayCompa::Maximun()
+{
+	if(this->length<=0)
+	{
+		return -1;
+	}
+	
+	int iMax = this->arr[0];
+	for(int i = 0;i<this->length;i++)
+	{		
+		if(this->arr[i]>iMax)
+		{
+			iMax = this->arr[i];
+		}
+	}
+	return iMax;
+}
+
+int ArrayCompa::Minimun()
+{
+	if(this->length<=0)
+	{
+		return -1;
+	}
+	
+	int iMin = this->arr[0];
+	for(int i = 0;i<this->length;i++)
+	{		
+		if(this->arr[i]<iMin)
+		{
+			iMin = this->arr[i];
+		}
+	}
+	return iMin;
+}
+
+int ArrayCompa::Difference()
+{
+	return (Maximun() - Minimun());
+}
+
 Array::~Array()
 {
-	
+	cout<<endl<<"inside destructor"<<endl;
 	while(arr!= NULL)
 	{
 		delete []arr;

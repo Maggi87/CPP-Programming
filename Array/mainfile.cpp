@@ -36,5 +36,13 @@ int main()
 	cout<<endl<<"-----------------------------------------------------------------"<<endl;
 	cout<<endl<<"Occurence Number is \t"<<obj2.SearchFirst(iNo)<<endl;
 	cout<<endl<<"-----------------------------------------------------------------"<<endl;
+
+
+	ArrayCompa obj3(iSize);
+	obj3.Accept();
+	obj3.Display();
+	cout<<endl<<"Maximun Value in array \t"<<obj3.Maximun()<<endl;
+	cout<<endl<<"Maximun Value in array \t"<<obj3.Minimun()<<endl;
+	cout<<endl<<"Difference Max & Min   \t"<<obj3.Difference()<<endl;
 	return 0;
 }

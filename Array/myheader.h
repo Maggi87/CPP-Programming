@@ -40,3 +40,15 @@ class ArraySearch:public Array
 
 		int increament(int);
 };
+
+class ArrayCompa:public Array
+{
+	public:
+		ArrayCompa(int iValue = 10):Array(iValue)
+		{
+
+		}
+		int Maximun();
+		int Minimun();
+		int Difference();
+};
